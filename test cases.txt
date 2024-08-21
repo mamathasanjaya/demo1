@@ -1,0 +1,146 @@
+sign up 
+
+As an unauthorized user, I want to sign up for the BookMyShow application through a sign-up form, so that I can access to movies list.
+
+acceptance criteria
+
+The registration form must include fields for username, email, password, and confirmation password.
+
+The password must meet specified complexity requirements (e.g., minimum length, inclusion of special characters).
+
+Upon successful registration, the user should receive a confirmation email.
+
+The user should be redirected to the login page after successful registration.
+
+
+1))Test Case: Register Page Validation
+
+Test Case ID: RP-001
+
+Description: Verify that the register page functions correctly
+
+
+Test Steps:
+
+1. Enter Valid Registration Details
+    (User has a valid email address and password)
+    - Steps:
+        - Enter valid first name
+        - Enter valid last name
+        - Enter valid email address
+        - Enter valid password
+        - Confirm password
+        - Click the "Register" button
+    - Expected Result: User is redirected to the login page
+
+
+2. Enter Invalid Email Address
+    - Preconditions: User tries to register with an invalid email address
+    - Steps:
+        - Enter invalid email address
+        - Enter valid password
+        - Confirm password
+        - Click the "Register" button
+    - Expected Result: Error message "Invalid email address" is displayed
+
+
+3. Enter Weak Password
+    - Preconditions: User tries to register with a weak password
+    - Steps:
+        - Enter valid email address
+        - Enter weak password
+        - Confirm password
+        - Click the "Register" button
+    - Expected Result: Error message "Password must be at least 8 characters" is displayed
+
+
+4. Password Mismatch
+    - Preconditions: User tries to register with mismatched passwords
+    - Steps:
+        - Enter valid email address
+        - Enter valid password
+        - Enter different password in confirm password field
+        - Click the "Register" button
+    - Expected Result: Error message "Passwords do not match" is displayed
+
+
+5. Required Field Validation
+    - Preconditions: User tries to register without filling in required fields
+    - Steps:
+        - Leave first name field empty
+        - Click the "Register" button
+    - Expected Result: Error message "First name is required" is displayed
+
+
+Labels: Register Page, Validation, Security
+
+Priority: High
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2)) sign-in
+
+As an authorized user, I want to log in for BookMyShow application, so that I can access my booking history and manage my bookings.
+
+acceptance criteria
+The login form must include fields for username/email and password.
+
+The system must validate the credentials and allow access to the user's account if correct.
+
+The system should display an error message for incorrect credentials.
+
+
+test case
+------------------
+
+Test Case: Login Page Validation
+
+Test Case ID: LP-001
+
+Description: Verify that the login page functions correctly
+
+Test Steps:
+
+1. Enter Valid Credentials
+    - Preconditions: User has a valid username and password
+    - Steps:
+        - Enter valid username in the username field
+        - Enter valid password in the password field
+        - Click the "Login" button
+    - Expected Result: User is redirected to the dashboard
+2. Enter Invalid Credentials
+    - Preconditions: User has an invalid username or password
+    - Steps:
+        - Enter invalid username in the username field
+        - Enter invalid password in the password field
+        - Click the "Login" button
+    - Expected Result: Error message "Invalid username or password" is displayed
+3. Forgot Password
+    - Preconditions: User has forgotten their password
+    - Steps:
+        - Click the "Forgot Password" link
+        - Enter registered email address
+        - Click the "Submit" button
+    - Expected Result: Password reset email is sent to the registered email address
+4. Username Field Validation
+    - Preconditions: User tries to login with an empty username field
+    - Steps:
+        - Leave the username field empty
+        - Click the "Login" button
+    - Expected Result: Error message "Username is required" is displayed
+5. Password Field Validation
+    - Preconditions: User tries to login with an empty password field
+    - Steps:
+        - Leave the password field empty
+        - Click the "Login" button
+    - Expected Result: Error message "Password is required" is displayed
+
+
+Labels: Login Page, Validation, Security
+
+Priority: High
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
